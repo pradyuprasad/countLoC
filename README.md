@@ -18,16 +18,16 @@ A Python-based CLI tool that analyzes GitHub repositories to track code contribu
 
 ## Installation
 
-1. Clone this repository:
+1. **Install UV** (if not already installed):
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+2. Clone this repository:
 ```bash
-git clone [repository-url]
-cd github-contribution-analyzer
-```
-
-2. Install required dependencies:
-
-```
-pip install gitpython python-dotenv requests
+git clone https://github.com/pradyuprasad/countLoC
+cd countLoC
+uv sync
 ```
 
 3. Create a .env file in the project root and add your GitHub PAT:
@@ -40,13 +40,13 @@ GITHUB_PAT=your_github_personal_access_token
 # Usage
 1. Run the main analysis script:
 ```
-python main.py
+uv run main.py
 ```
 
 2. View the statistics:
 
 ```
-python load_data.py
+uv run load_data.py
 ```
 
 The tool will:
